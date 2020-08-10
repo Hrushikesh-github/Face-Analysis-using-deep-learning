@@ -1,0 +1,59 @@
+Adience dataset
+Because of my GPU limit, I resized all the images to 59 * 59 ( 59 because I initially tried on mxnet and 59 gave correct values for my custom model ). I fear that the resizing may cause some problems in face clarity like that due to smiles dataset but the images in the dataset itself are not clear and fer2013 was resized to 60 * 60 and worked well, so I thought it won't  be an issue.
+
+About my custom model:
+It's a sequential model with no special kinds like the inception or the resnet addition.
+Strides and padding were used to decrease size and only 1 max pooling was utilized. 
+The reason for strides and padding was because mxnet ( which I initally used but discarded because of errors ) which wanted me to clearly specify all the values of strides and padding. Thus by calucaltions I found 59 * 59 would ensure model is correct
+I wanted to avoid the use of any special architectures and also the fc ( as they increase memory and time to train ) and thus created this model.
+I kept a fc layer though with low # of nodes 512.
+I followed VGG type of increase in filterss ( doubling always ) majorly 3*3 receptive fields with 5*5 at the beginning.
+
+The epoch timing was the highest run on this system. Each Epoch was 300 sec, I couldn't increase batch size more than 32 otherwise GPU fails ( which is one of the reasons why I had to decrease the image size)
+
+Exp1:
+
+Worried about the training time, I removed few BN layers in between ( Also I felt this was ok because applying BNs after every CONV felt unnecessary, as the input recieved by a CONV layer without BN would acutally recieve input after BN. )
+Also RELU was used and no regularization. With no idea of lr to be used ( momentum was applied ), I used 1e-3.
+The training loss though steadily decreased but the val loss was very volatile and infact increased from epoch 15. Though it is too early to say overfitting, lr was decreased and training continued from epoch 15. 
+The volatility decreased but the movement of both the val lines in the wrong direction worried me and lr was further decreased to lr = 1e-6 ( because I had to go somewhere and allowed my system to train the model slowly, hopefully getting better )
+The learning stagnated very quickly to my suprise. 
+Was it because the network wasn't deep enough? Or because of no regularization? 
+Probably network isn't an issue and maybe regularization would help to train for longer.
+Overall I got an accuracy of 81.01 % ( Levi et. al reported 86.8 % )
+
+The testing accuracy are:
+82.43, 82.31 for epoch 30, 35 and 81.96 for epoch 25
+
+Expt2:
+The following changes were made:
+1. RELU to ELU
+2. I added all the BNs and I noticed that I missed an activation in the FC layer, I added that
+3. Regularization increased to 0.0005
+
+( By mistake I added softmax activation instead of ELU and I noticed lr 1e-4 as starting lr was very slow, so correcting the activation, starting lr was 1e-3)
+Epoch 0-15: 1e-3 
+Epoch 15-25: 1e-4
+Epoch 25-30  : 1e-5  Acc: 88.7
+Epoch 30-35 : 1e-6   Acc: 88.4
+
+The testing accuracy are:
+87.09 for epoch 30, 35 but 87.15 for epoch 20, 25
+
+But look at the plot! Because of high regularization ( I suppose ), the error is not even less than one. But we got great train and val accuracy nonetheless
+
+
+Age Training:
+Same model as expt2 was used and lr = 1e-3.
+
+At epoch 35, lr reduced from 1e-3 to 1e-4
+At epoch 45, lr reduced from 1e-4 to 1e-5
+
+Got great results, slightly better than adrain's with epoch_55 giving rank-1 acc: 71.03% and One-off acc as 91.39%
+
+
+Output:
+The output should great results.
+
+Note that the dataset has faces aligned and thus for implementing for personal images, we need to align the face. 
+dlib was used for face alignment

@@ -1,0 +1,8 @@
+Seeing the stagnation in SGD I used Adam with a lr = 1e-3
+At epoch 30, I decreased the lr to 1e-4 because there was sharp deviation in
+train_loss from val_loss, a sign of overfitting. Now the deviation still 
+continues but at slower rate and worse part is val_loss is nearly constant with the
+train_loss still decreasing, a sign of overfitting. I could have stopped it at epoch 40 but allowed till 40 
+because I saw a small increase in val_accuracy.
+
+I got a val_accuracy of 66.88

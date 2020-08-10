@@ -1,0 +1,34 @@
+Because of overfitting, data augmentation was done and Adam was used to train with lr =1e-3. 
+At epoch # 40 (better than 30 from previous expt) From around 35, though training data is showing improvement, the validation loss/acc has stagnated, so decided to change lr to 1e-4
+We can observe a considerable change. But after 50 the learning stagnated and clear overfitting can be seen.
+Accuracy achieved as 67.72 at end of epoch 55
+Decreasing lr to 1e-5, 67.87 (Reaching 68 in middle) but not seeing much difference in the plots, I felt it's no use to lower the lr further.
+We have surely decreased the overfitting from last expt
+However I further decided to decrease the lr to 1e-6 hoping some positive result would be obtained but not much could have been obtained.
+Finally I got a accuracy(on validaton set) 67.93 %
+
+output termial values...
+
+[INFO] old learning rate: 9.999999747378752e-06
+[INFO] new learning rate:9.999999974752427e-07
+Epoch 61/70
+224/224 [==============================] - 158s 705ms/step - loss: 0.7902 - accuracy: 0.7152 - val_loss: 0.9052 - val_accuracy: 0.6780
+Epoch 62/70
+224/224 [==============================] - 157s 699ms/step - loss: 0.7958 - accuracy: 0.7110 - val_loss: 0.9087 - val_accuracy: 0.6784
+Epoch 63/70
+224/224 [==============================] - 151s 674ms/step - loss: 0.7950 - accuracy: 0.7118 - val_loss: 0.9082 - val_accuracy: 0.6796
+Epoch 64/70
+224/224 [==============================] - 153s 685ms/step - loss: 0.7895 - accuracy: 0.7140 - val_loss: 0.9107 - val_accuracy: 0.6767
+Epoch 65/70
+224/224 [==============================] - 151s 672ms/step - loss: 0.7940 - accuracy: 0.7126 - val_loss: 0.9055 - val_accuracy: 0.6784
+Epoch 66/70
+224/224 [==============================] - 154s 687ms/step - loss: 0.7893 - accuracy: 0.7146 - val_loss: 0.9086 - val_accuracy: 0.6770
+Epoch 67/70
+224/224 [==============================] - 157s 703ms/step - loss: 0.7866 - accuracy: 0.7179 - val_loss: 0.9084 - val_accuracy: 0.6784
+Epoch 68/70
+224/224 [==============================] - 160s 713ms/step - loss: 0.7913 - accuracy: 0.7127 - val_loss: 0.9106 - val_accuracy: 0.6767
+Epoch 69/70
+224/224 [==============================] - 157s 700ms/step - loss: 0.7839 - accuracy: 0.7167 - val_loss: 0.9045 - val_accuracy: 0.6778
+Epoch 70/70
+224/224 [==============================] - 150s 670ms/step - loss: 0.7862 - accuracy: 0.7168 - val_loss: 0.9091 - val_accuracy: 0.6793
+

@@ -1,0 +1,26 @@
+python test_recognizer.py --model /home/hrushikesh/dl4cv/fer2013/output/expt3/checkpoints/epoch_70.hdf5
+[INFO] loading {}... /home/hrushikesh/dl4cv/fer2013/output/expt3/checkpoints/epoch_70.hdf5
+[INFO] accuracy: 65.76
+
+python test_recognizer.py --model /home/hrushikesh/dl4cv/fer2013/output/expt1/checkpoints/epoch_70.hdf5
+[INFO] loading /home/hrushikesh/dl4cv/fer2013/output/expt1/checkpoints/epoch_70.hdf5...
+[INFO] accuracy: 63.53
+
+python test_recognizer.py --model /home/hrushikesh/dl4cv/fer2013/output/expt2/checkpoints/epoch_45.hdf5
+[INFO] loading /home/hrushikesh/dl4cv/fer2013/output/expt2/checkpoints/epoch_45.hdf5...
+[INFO] accuracy: 66.07
+
+python test_recognizer.py --model /home/hrushikesh/dl4cv/fer2013/output/expt3/checkpoints/epoch_50.hdf5
+[INFO] loading /home/hrushikesh/dl4cv/fer2013/output/expt3/checkpoints/epoch_50.hdf5...
+[INFO] accuracy: 65.88
+
+python test_recognizer.py --model /home/hrushikesh/dl4cv/fer2013/output/expt3/checkpoints/epoch_55.hdf5
+[INFO] loading /home/hrushikesh/dl4cv/fer2013/output/expt3/checkpoints/epoch_55.hdf5...
+[INFO] accuracy: 65.51
+
+python test_recognizer.py --model /home/hrushikesh/dl4cv/fer2013/output/expt3/checkpoints/epoch_60.hdf5
+[INFO] loading /home/hrushikesh/dl4cv/fer2013/output/expt3/checkpoints/epoch_60.hdf5...
+[INFO] accuracy: 65.76
+
+
+The strange thing is I got the highest accuracy for expt 2 which I suspected to have high overfitting

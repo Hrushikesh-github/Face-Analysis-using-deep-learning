@@ -1,0 +1,14 @@
+I used SGD optimizer with a base learning rate of 1e-2, momentum term of 0.9 and Nesterov acceleration set False.
+The default Xavier/Glorot initialization method was used to initialize the weights in CONV and FC layers. 
+Only data augmentation applied was horizontal flipping (and also resizing)
+
+learning rates were 
+0-40 1e-2
+40-55 1e-3
+55-70 1e-4
+
+I have obtained a accuracy of 64.75 on validation set 
+but the network effectively stopped learning from epoch 55/60. Also, the switch from 1e − 3 to 1e − 4 is practically unnoticeable – with these order of
+magnitude drops we would expect to see at least some rise in accuracy and a corresponding drop in loss
+
+Thus in next experiment I used adam, as SGD led to stagnation
