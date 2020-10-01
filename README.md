@@ -10,6 +10,9 @@ compared to the corresponding publication of dataset.
 Trained a model on FER dataset achieving 66.07% accuracy which is equivalent to 5 position in the leadership board
 of the former competition.
 
+# Model Used
+![emotion_vggnet](https://user-images.githubusercontent.com/56476887/94838869-d6e35d00-0433-11eb-8fdd-63ca36284bf2.png)
+
 # Training Logs
 ![result](https://user-images.githubusercontent.com/56476887/94838572-6f2d1200-0433-11eb-847b-06f35ffc319b.png)
 ![result_stop1](https://user-images.githubusercontent.com/56476887/94838578-705e3f00-0433-11eb-96a0-8bbc0339d2df.png)
