@@ -1,7 +1,7 @@
 # Face-Analysis-using-deep-learning
 Using FER and Adience datasets, set of deep learning models which provide emotions, age and gender properties of all the faces in a image or video
 
-Models trained on Adience dataset and FER2013 dataset utilized for gender, age and emotion recognition
+Models trained on Adience dataset and FER2013 dataset utilized for gender, age and emotion recognition.
 
 Trained my custom model on Adience dataset which achieved 20% greater rank-1 accuracy in the age category
 compared to the corresponding publication of dataset.
@@ -18,13 +18,22 @@ I kept a fc layer though with low # of nodes 512.
 I followed VGG type of increase in filterss ( doubling always ) majorly 3*3 receptive fields with 5*5 at the beginning.
 
 For the FER dataset, again a custom VGGNet inspired model was used. It has similar structure to the VGG-Net(doubling of filters as dimension is reduced by half).
+
 ![emotion_vggnet](https://user-images.githubusercontent.com/56476887/94838869-d6e35d00-0433-11eb-8fdd-63ca36284bf2.png)
 
 # Training Logs
+Many experiments have been done. Here is one of the sample outputs of one of my experiments on the Adience dataset. Training was stopped when learning appeared to stagnate or whether overfitting was observed.
+
+Final Result for the adience dataset in category
 ![result](https://user-images.githubusercontent.com/56476887/94838572-6f2d1200-0433-11eb-847b-06f35ffc319b.png)
+
+Graphs when training was stopped at different epochs (because lowering of learning rate was required)
 ![result_stop1](https://user-images.githubusercontent.com/56476887/94838578-705e3f00-0433-11eb-96a0-8bbc0339d2df.png)
 ![result_stop2](https://user-images.githubusercontent.com/56476887/94838582-705e3f00-0433-11eb-907b-934d82805f20.png)
 ![result_stop3](https://user-images.githubusercontent.com/56476887/94838584-70f6d580-0433-11eb-9f69-aed43e9fd65d.png)
+
+FER result
+
 ![vggnet_emotion2](https://user-images.githubusercontent.com/56476887/94838587-718f6c00-0433-11eb-8da7-612f68647315.png)
 
 # Results
