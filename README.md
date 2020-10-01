@@ -24,7 +24,7 @@ For the FER dataset, again a custom VGGNet inspired model was used. It has simil
 # Training Logs
 Many experiments have been done. Here is one of the sample outputs of one of my experiments on the Adience dataset. Training was stopped when learning appeared to stagnate or whether overfitting was observed.
 
-Final Result for the adience dataset in category
+Final Result for the adience dataset in age category
 
 ![result](https://user-images.githubusercontent.com/56476887/94838572-6f2d1200-0433-11eb-847b-06f35ffc319b.png)
 
