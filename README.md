@@ -33,3 +33,4 @@ For the FER dataset, again a custom VGGNet inspired model was used. It has simil
 ![Screenshot from 2020-07-28 20-09-38](https://user-images.githubusercontent.com/56476887/94838211-deeecd00-0432-11eb-9029-0407af0025a9.png)
 ![Screenshot from 2020-07-28 20-58-35](https://user-images.githubusercontent.com/56476887/94838214-df876380-0432-11eb-9384-f8d53dfc32ae.png)
 
+![emotions](https://user-images.githubusercontent.com/56476887/94844068-49a40680-043b-11eb-8936-ab9d412072f5.gif)
