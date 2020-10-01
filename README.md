@@ -6,11 +6,18 @@ Models trained on Adience dataset and FER2013 dataset utilized for gender, age a
 Trained my custom model on Adience dataset which achieved 20% greater rank-1 accuracy in the age category
 compared to the corresponding publication of dataset.
 
-
 Trained a model on FER dataset achieving 66.07% accuracy which is equivalent to 5 position in the leadership board
 of the former competition.
 
-# Model Used
+# Models Used
+For the adience dataset,a sequential model with no special kinds like the inception or the resnet addition was created.
+Strides and padding were used to decrease size and only 1 max pooling was utilized. 
+The reason for strides and padding was because mxnet ( which I initally used but discarded because of errors ) which wanted me to clearly specify all the values of strides and padding. Thus by calucaltions I found 59 * 59 would ensure model is correct
+I wanted to avoid the use of any special architectures and also the fc ( as they increase memory and time to train ) and thus created this model.
+I kept a fc layer though with low # of nodes 512.
+I followed VGG type of increase in filterss ( doubling always ) majorly 3*3 receptive fields with 5*5 at the beginning.
+
+For the FER dataset, again a custom VGGNet inspired model was used. It has similar structure to the VGG-Net(doubling of filters as dimension is reduced by half).
 ![emotion_vggnet](https://user-images.githubusercontent.com/56476887/94838869-d6e35d00-0433-11eb-8fdd-63ca36284bf2.png)
 
 # Training Logs
@@ -25,3 +32,4 @@ of the former competition.
 ![Screenshot from 2020-07-28 20-02-31](https://user-images.githubusercontent.com/56476887/94838209-de563680-0432-11eb-9aa6-640e3d91780d.png)
 ![Screenshot from 2020-07-28 20-09-38](https://user-images.githubusercontent.com/56476887/94838211-deeecd00-0432-11eb-9029-0407af0025a9.png)
 ![Screenshot from 2020-07-28 20-58-35](https://user-images.githubusercontent.com/56476887/94838214-df876380-0432-11eb-9384-f8d53dfc32ae.png)
+
