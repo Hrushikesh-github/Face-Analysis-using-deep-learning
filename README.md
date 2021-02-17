@@ -43,7 +43,6 @@ FER result
 ![Screenshot from 2020-07-28 19-43-26](https://user-images.githubusercontent.com/56476887/94838203-dc8c7300-0432-11eb-9ec9-6d819b250cb9.png)
 ![Screenshot from 2020-07-28 20-02-31](https://user-images.githubusercontent.com/56476887/94838209-de563680-0432-11eb-9aa6-640e3d91780d.png)
 ![Screenshot from 2020-07-28 20-09-38](https://user-images.githubusercontent.com/56476887/94838211-deeecd00-0432-11eb-9029-0407af0025a9.png)
-![Screenshot from 2020-07-28 20-58-35](https://user-images.githubusercontent.com/56476887/94838214-df876380-0432-11eb-9384-f8d53dfc32ae.png)
 
 
 More information about the learning rates used, choices like optimizer etc can be found in the text files.
