@@ -19,8 +19,6 @@ I followed VGG type of increase in filterss ( doubling always ) majorly 3*3 rece
 
 For the FER dataset, again a custom VGGNet inspired model was used. It has similar structure to the VGG-Net(doubling of filters as dimension is reduced by half).
 
-![emotion_vggnet](https://user-images.githubusercontent.com/56476887/94838869-d6e35d00-0433-11eb-8fdd-63ca36284bf2.png)
-
 # Training Logs
 Many experiments have been done. Here is one of the sample outputs of one of my experiments on the Adience dataset. Training was stopped when learning appeared to stagnate or whether overfitting was observed.
 
